@@ -1,0 +1,5 @@
+wort = "irgendwas"
+
+laenge = len(wort)
+
+print("Das Wort {:s} ist {:d} Zeichen lang".format(wort, laenge))
