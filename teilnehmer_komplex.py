@@ -13,11 +13,12 @@ teilnehmer = [
         ['Zsolt', 1988],
         ['Birgit', 1987],
         ['Lorenz', 1987],
-        ['Mark', 1975, 'blau'],
+        ('Mark', 1975, 'blau' , ['VS', 'Gym', 'Uni']),
     ]
 
-teilnehmer.sort()
+# teilnehmer.sort()
 
+# print(teilnehmer)
 # pprint(teilnehmer)
 '''
 wir lesen eine usereingabe (name) und durchsuchen die Liste nach dem
@@ -37,7 +38,14 @@ for (i, tn) in enumerate(teilnehmer):
         try:
             print(tn[2])
         except IndexError:
-            pass
+            print('keine Lieblingsfarbe definiert')
+            
+        try:
+            print(tn[3])
+            print(tn[3][-1])
+        except IndexError:
+            print('keine Ausbildung definiert')
+        
         
 if not found:
     print('nicht u niemand gefunden')

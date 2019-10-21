@@ -23,6 +23,6 @@ print(f)
 
 f.remove(1) # entfernt den ersten Wert aus der Liste! 
 print(f)
-0
+
 del(f[0])   # entfernt per index
 print(f)
