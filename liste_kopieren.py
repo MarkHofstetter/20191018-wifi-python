@@ -4,6 +4,7 @@ a = [
     3,
     ]
 
+b = a
 b = list(a)
 
 a.append(4)

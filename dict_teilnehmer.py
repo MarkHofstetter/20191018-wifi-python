@@ -30,6 +30,7 @@ druch Eingabe
 '''
 
 edu = input('(Zusätzliche) Ausbildung? ')
+
 if 'edu' in teilnehmer[search]:
     teilnehmer[search]['edu'].append(edu)
 else:
