@@ -38,3 +38,8 @@ for i in range(0, count):
     del(start_numbers[zz])
     
 print(lotto_numbers)
+
+for i in range(20):
+    lotto_numbers = random.sample(range(1, max_number + 1), 6)
+    lotto_numbers.sort()
+    print(lotto_numbers)
