@@ -30,6 +30,7 @@ test = {
     'B1234': False,
     'A-12345': False,
     'A    1234': True,
+    'A - - -1234': True,
     'A-0123': False,
     # ...
 }
@@ -37,10 +38,11 @@ test = {
 for plz, result in test.items():
     print(plz, result)
     match = re.search(
-        r'^[Aa][- ]{0,1}\d{4}$', 
-        plz)
+        r'^[Aa][-\s]*[1-9]\d{3}$', 
+        plz)          
         
-    if match is None and result is True:
+    if (match is None and result is True) or \
+       (match and result is False):
         print("passt NICHT")
     else:
         print("passt")
